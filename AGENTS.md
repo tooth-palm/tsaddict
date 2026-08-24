@@ -4,8 +4,8 @@
 
 # 資料の配置
 
-- 当面は、すべての資料をリポジトリ直下にフラットな構成で保存する。
-- 資料が増えた段階で、ディレクトリ構成を含めた整理・構造化を検討する。
+- すべての資料を`contents`ディレクトリ直下にフラットな構成で保存する。
+- 資料がさらに増えた段階で、`contents`配下のディレクトリ構成を含めた整理・構造化を検討する。
 
 # Frontmatter
 
@@ -31,7 +31,7 @@ date: YYYY-MM-DD
 
 # ライブラリ解説シリーズ
 
-ライブラリの役割・特性を理解するための資料は、`library-document-template.md`を下地として作成する。
+ライブラリの役割・特性を理解するための資料は、`contents/library-document-template.md`を下地として作成する。
 
 ## 読者と到達目標
 
@@ -42,7 +42,7 @@ date: YYYY-MM-DD
 
 ## ファイル名
 
-- ライブラリ名を小文字のkebab-caseにしたMarkdownファイルをリポジトリ直下へ作成する。例: `react-hook-form.md`。
+- ライブラリ名を小文字のkebab-caseにしたMarkdownファイルを`contents`ディレクトリ直下へ作成する。例: `contents/react-hook-form.md`。
 - 同名の資料がある場合は新規作成せず、既存資料を更新する。
 
 ## 必須構成
