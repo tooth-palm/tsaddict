@@ -1,0 +1,15 @@
+{
+  "name": "tsaddict",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:mermaid": "node scripts/check-mermaid.mjs",
+    "prepare": "vp config --no-agent"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1",
+    "mermaid": "^11.11.0",
+    "vite-plus": "^0.2.2"
+  },
+  "packageManager": "bun@1.3.13"
+}
