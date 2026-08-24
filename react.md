@@ -376,13 +376,13 @@ sequenceDiagram
   participant Element as React element
   participant Root as ReactDOMRoot
   participant Queue as Root update queue
-  participant Loop as Work loop
+  participant WorkLoop as Work loop
 
   JSX->>Element: jsx(App, props)で記述を作る
   Element->>Root: root.render(element)
   Root->>Queue: updateを作成してenqueue
-  Queue->>Loop: rootにpending laneをmark
-  Loop-->>Root: 優先度に応じてrenderを開始
+  Queue->>WorkLoop: rootにpending laneをmark
+  WorkLoop-->>Root: 優先度に応じてrenderを開始
 ```
 
 element生成の実装は[`ReactJSXElement.js`](https://github.com/facebook/react/blob/main/packages/react/src/jsx/ReactJSXElement.js)、root updateへの入口は[`ReactDOMRoot.js`](https://github.com/facebook/react/blob/main/packages/react-dom/src/client/ReactDOMRoot.js)と[`ReactFiberReconciler.js`](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberReconciler.js)にある。
